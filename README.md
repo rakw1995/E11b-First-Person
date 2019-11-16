@@ -1,14 +1,11 @@
 # E11b-First-Person
 
-This is an opportunity to begin to experiment with a first-person perspective in a Godot 3D environment. This exercise will involve creating collision shapes to represent the player's body and then controlling the camera with the keyboard and mouse.
+The goal of this repository is to create the beginning of a first person shooter using a kinematic body with a camera that can interact with a scene.
 
-First, **fork and clone** this repository. Then, open Godot and Import a project. Find the location of this repository in the Godot file picker and then open the project.godot file.
-
-Again, the KidsCanCode tutorial should guide you step-by-step through this exercise. There is also a video that accompanies the tutorial. The only change from the video should be that you will navigate the terrain I have provided instead of the CSG environment he describes.
-
- * [Godot 101: Intro to 3D (part 5)](http://kidscancode.org/godot_recipes/basics/3d/101_3d_07/)
- * [(accompanying video)](https://www.youtube.com/watch?v=_55ktNdarxY)
- 
- When you are invited to download the Kenney Weapon Pack, you can do so here: [https://kenney.nl/assets/weapon-pack](https://kenney.nl/assets/weapon-pack).
- 
- When you have completed the exercise, save the Scenes, edit your LICENSE and README, commit everything to Github, and turn in the URL of your repository on Canvas.
+* We build the scene, then create a kinematic body for the character.
+* We then create two collision shapes for it (body and feet). The feet are there to simulate "walking" a little better, rather than gliding over everything.
+* We add a spatial node with a camera and then a mesh weapon.
+* We add a script to the Kinematic body that will:
+  - handle each key press (input...which way is the player trying to go?)
+  - handle mouse motion (controlling the camera while limiting its movement)
+  - physics (gravity, velocity, speed, movement)
