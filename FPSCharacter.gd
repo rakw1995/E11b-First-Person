@@ -22,7 +22,7 @@ func get_input():
     return input_dir
 
 func _unhandled_input(event):
-    if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+    if event is InputEventMouseMotion:
         $Pivot.rotate_x(-event.relative.y * mouse_sensitivity)
         rotate_y(-event.relative.x * mouse_sensitivity)
         $Pivot.rotation.x = clamp($Pivot.rotation.x, -1.2, 1.2)
